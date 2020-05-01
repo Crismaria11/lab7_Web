@@ -1,12 +1,15 @@
 import React from 'react'
 import {B} from './laberinto.jsx'
+import BushImage from './bush.gif'
 
 const Bush = ({x,y}) =>{
 
     const styleBush = {
         width: `${B}px`,
         height: `${B}px`,
-        background: 'blue',
+        //background: 'green',
+        backgroundImage: `url(${BushImage})`,
+        backgroundSize: 'cover',
         gridColumnStart: x+1,
         gridRowStart: y+1
     }

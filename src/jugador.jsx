@@ -6,7 +6,7 @@ const Jugador = ({x,y}) =>{
     const styleJugador = {
         width: `${B}px`,
         height: `${B}px`,
-        backgroundImage: 'black',
+        background: 'black',
         gridColumnStart: x+1,
         gridRowStart: y+1
     }

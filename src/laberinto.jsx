@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import Pared from './pared.jsx'
+import ParedV from './paredV.jsx'
+import ParedH from './paredH.jsx'
 import Bush from './bush.jsx'
-import Algo from './algo.jsx'
 import Jugador from './jugador.jsx'
 
-const WIDTH = 20
-const HEIGHT = 20
-const B = 10
+const WIDTH = 10
+const HEIGHT = 10
+const B = 30
 
 const Laberinto = () => {
     const [laberinto,setLaberinto]=React.useState([])
@@ -32,29 +32,30 @@ const Laberinto = () => {
     } 
 
     return (
-    <div style={style}>
-        {laberinto.map((row,rowIndex)=>{
-            return row.map((column,columnIndex)=>{
-                if(column === '|') {
-                    return <Pared key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex}/>
-                }
-                else if (column === '+') {
-                    return <Bush key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex}/>
-                }
-                else if (column === '-') {
-                    return <Algo key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex}/>
-                }
-                else if (column === 'p') {
-                    return <Jugador key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex}/>
-                }
-                else {
-                    return null
-                }
-                
-                
-            })
-            })}
-         </div>
+        <div style={style}>
+            {laberinto.map((row,rowIndex)=>{
+                return row.map((column,columnIndex)=>{
+                    if(column === '|') {
+                        return <ParedV key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex}/>
+                    }
+                    else if (column === '-') {
+                        return <ParedH key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex}/>
+                    }
+                    else if (column === '+') {
+                        return <Bush key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex}/>
+                    }
+                    else if (column === 'p') {
+                        return <Jugador key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex}/>
+                    }
+                    else {
+                        return null
+                    }
+                    
+                    
+                })
+                })
+            }
+        </div>
     )
 }
 
