@@ -3,7 +3,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.jsx?$/,
-            use: 'babel-loader'
+            use: ['babel-loader', 'eslint-loader']
         },
         {
             test: /\.(jpe?g|gif|png)$/,
@@ -17,12 +17,13 @@ module.exports = {
                     limit: 10000
                 }
             }
-
         }
     ]
 
     },
     devServer: {
-        contentBase: "dist"
+        contentBase: 'dist',
+        port: 3000,
+        overlay: false
     }
 }
