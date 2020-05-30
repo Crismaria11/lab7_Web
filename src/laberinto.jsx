@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-/* eslint no-shadow: ["error", { "allow": ["width", "height"] }] */
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/no-array-index-key */
 import React, {useEffect} from 'react'
 import ParedV from './paredV.jsx'
 import ParedH from './paredH.jsx'
@@ -175,16 +176,16 @@ const Laberinto = () => {
           laberinto.map((row, rowIndex) => {
             return row.map((column, columnIndex) => {
               if (column === '|') {
-                return <ParedV key-index={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
+                return <ParedV key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
               }
               else if (column === '-') {
-                return <ParedH key-index={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
+                return <ParedH key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
               }
               else if (column === '+') {
-                return <Bush key-index={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
+                return <Bush key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
               }
               else if (column === 'g') {
-                return <Ash key-index={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
+                return <Ash key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
               }
               return null
             })

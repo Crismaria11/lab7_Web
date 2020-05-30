@@ -24,12 +24,13 @@
     "rules": {
         "semi": ["error", "never"], 
         "object-curly-spacing": ["error", "never"], 
-        "no-trailing-spaces": ["error", {"ignoreComments": true}, {"ignoreComments": true}], 
+        "no-trailing-spaces": ["error", {"ignoreComments": true}], 
         "comma-dangle": ["error", "never"],
-        "import/extensions": ["error", "always", {"ignorePackages": "true"}],
+        "import/extensions": ["error", "always"],
         "space-in-parens": ["error", "never"],
         "brace-style": ["error", "stroustrup"],
         "arrow-body-style": ["error", "always"],
-        "no-else-return": ["error", {"allowElseIf": true}]
+        "no-else-return": ["error", {"allowElseIf": true}],
+        "no-shadow": ["error", { "allow": ["width", "height"] }]
     }
 }
