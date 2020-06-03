@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BushImage from './bushNew.gif'
+import BushImage from './bushes.gif'
 import {B} from './configs.js'
 
 
