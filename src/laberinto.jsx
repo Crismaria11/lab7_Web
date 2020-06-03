@@ -4,7 +4,7 @@
 import React, {useEffect} from 'react'
 import ParedV from './paredV.jsx'
 import ParedH from './paredH.jsx'
-import Bushes from './bush.jsx'
+import Bush1 from './bushes.jsx'
 import Jugador from './jugador.jsx'
 import Ash from './ash.jsx'
 import Fondo from './fondoNuevo.png'
@@ -182,7 +182,7 @@ const Laberinto = () => {
                 return <ParedH key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
               }
               else if (column === '+') {
-                return <Bushes key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
+                return <Bush1 key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
               }
               else if (column === 'g') {
                 return <Ash key={`${rowIndex}-${columnIndex}`} x={columnIndex} y={rowIndex} />
